@@ -1,0 +1,21 @@
+INSERIR
+INSERT INTO usuarios(nome, email, idade) VALUES(
+    "Marilda", 
+    "marilda@teste.com",
+    58
+);
+
+ATUALIZAR
+UPDATE usuarios SET nome = "Nome de Teste" WHERE nome = "Marcelino Neto";
+
+DELETAR
+DELETE FROM usuarios WHERE nome = "Marilda";
+
+----------------------------------------------------
+COMANDOS SQL
+
+SHOW DATABASES; //visualizar todas os bancos de dados
+CREATE DATABASE nomeDoBancoDeDados; //criar novo Banco de Dados
+CREATE TABLE nomeDaTabelausuarios(nome VARCHAR(50), email VARCHAR(100), idade INT); //Criar nova nomeDaTabela 
+SELECT * FROM usuarios; //mostrar dados de uma Tabela
+
