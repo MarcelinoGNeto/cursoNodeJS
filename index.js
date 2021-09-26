@@ -1,12 +1,17 @@
 const express = require("express");
 const app = express();
 const handlebars = require('express-handlebars')
-const Sequelize = require('sequelize');
+const bodyParser = require('body-parser')
+const Sequelize = require('sequelize')
 
 // Config
     // Template Engine
         app.engine('handlebars', handlebars({defaultLayout: 'main'}))
         app.set('view engine', 'handlebars')
+    /*Body Parser
+    app.use(express.json());
+    app.use(express.urlencoded({extended: false}));
+    */
     // Conexão com o banco de dados MySql
     const sequelize = new Sequelize('testenodejs', 'root', '1234567',{
         host: 'localhost',
