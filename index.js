@@ -8,10 +8,10 @@ const Sequelize = require('sequelize')
     // Template Engine
         app.engine('handlebars', handlebars({defaultLayout: 'main'}))
         app.set('view engine', 'handlebars')
-    /*Body Parser
-    app.use(express.json());
+    //Body Parser
     app.use(express.urlencoded({extended: false}));
-    */
+    app.use(express.json());
+    //
     // Conexão com o banco de dados MySql
     const sequelize = new Sequelize('testenodejs', 'root', '1234567',{
         host: 'localhost',
@@ -24,7 +24,7 @@ const Sequelize = require('sequelize')
     })
 
     app.post('/add', function(req, res){
-        res.send('FORMULARIO RECEBIDO')
+        res.send("Texto: " + req.body.titulo + "Conteudo: " + req.body.conteudo)
     })
 
 app.listen(8081, function(){
